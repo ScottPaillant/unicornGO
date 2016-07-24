@@ -22,7 +22,6 @@ var initialPage = React.createClass({
     })
   },
   render() {
-    console.log('rendering page');
     return (
       <View style={styles.container}>
         <Button style={{margin:10}} onPress={this.onPress}> 

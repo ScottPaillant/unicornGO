@@ -18,11 +18,6 @@ import InitialPage from './InitialPage';
 
 var working = React.createClass({
 
-  _handlePress(){
-    this.navigator.push({
-    name: 'Login', // Matches route.name
-    })
-  },
   renderScene(route, navigator) {
     return <route.component navigator={navigator} {...route.passProps} />
    },
