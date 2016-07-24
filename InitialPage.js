@@ -58,13 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fcfcfc',
     alignItems: 'center',
-<<<<<<< 42c6a63b50c59084111333ce68ce230bc0521696
   },
-=======
-    fontFamily: 'Verdana'
-
-  },
-
   bg: {
         
         height: 100,
@@ -73,7 +67,6 @@ const styles = StyleSheet.create({
 
        
     }
->>>>>>> Added pic
 });
 
 export default InitialPage;
