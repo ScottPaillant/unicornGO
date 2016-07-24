@@ -18,14 +18,13 @@ import LoginPage from './LoginPage';
 import InitialPage from './InitialPage';
 import SignUpPage from './SignUpPage';
 import HomePage from './HomePage';
-
+import sturecPage from  './sturecPage';
 var working = React.createClass({
 
   renderScene(route, navigator) {
     return <route.component navigator={navigator} {...route.passProps} />
    },
    render(){
-    console.log('rendering first page');
     return (
       <Navigator
         renderScene={this.renderScene}

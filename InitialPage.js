@@ -10,6 +10,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   Navigator
 } from 'react-native';
 import Button from 'react-native-button';
@@ -32,14 +33,19 @@ var InitialPage = React.createClass({
   render() {
     return (
        
-      <View style = {styles.container}>
-        <Text style= {{margin:100, color: 'black'}}>
+
+      <View style={styles.container}>
+      
+        <Text style={{margin:10, marginTop:200, color: 'black', fontSize: 40}}>
         Unicorn Go
         </Text>
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('SignUpPage')}> 
+           <Image style={styles.bg} resizeMode = 'contain' source={require('./sf.png')}/>
+
+        <Button style={{marginTop:40, color: 'black', }} onPress={() => this.onPress('SignUpPage')}> 
           Sign Up
+
         </Button>
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('LoginPage')}> 
+        <Button style={{margin:10, color: 'black', }} onPress={() => this.onPress('LoginPage')}> 
           Login
         </Button>
       </View>
@@ -50,9 +56,24 @@ var InitialPage = React.createClass({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'mintcream',
+    backgroundColor: '#fcfcfc',
     alignItems: 'center',
+<<<<<<< 42c6a63b50c59084111333ce68ce230bc0521696
   },
+=======
+    fontFamily: 'Verdana'
+
+  },
+
+  bg: {
+        
+        height: 100,
+        resizeMode: 'contain',
+        marginRight: 10
+
+       
+    }
+>>>>>>> Added pic
 });
 
 export default InitialPage;

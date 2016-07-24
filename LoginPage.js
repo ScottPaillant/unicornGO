@@ -13,8 +13,16 @@ import {
   Navigator
 } from 'react-native';
 import Button from 'react-native-button';
+import sturecPage from './sturecPage';
+
 
 var LoginPage = React.createClass({
+  onPress(){
+    this.props.navigator.push({
+      component: sturecPage
+      })
+  },
+
   render() {
     return (
       <View style={{flex:1,backgroundColor:'mintcream'}}>
@@ -23,6 +31,15 @@ var LoginPage = React.createClass({
         </Button>
       </View>
     );}
+});
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'blue',
+  },
+  
 });
 
 export default LoginPage;
