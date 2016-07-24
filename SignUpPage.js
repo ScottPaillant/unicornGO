@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -14,15 +8,15 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
-var LoginPage = React.createClass({
+var SignUpPage = React.createClass({
   render() {
     return (
       <View style={{flex:1,backgroundColor:'mintcream'}}>
         <Button> 
-          The 
+          Welcome! 
         </Button>
       </View>
     );}
 });
 
-export default LoginPage;
+export default SignUpPage;

@@ -15,6 +15,7 @@ import {
 import Button from 'react-native-button';
 import LoginPage from './LoginPage';
 import InitialPage from './InitialPage';
+import SignUpPage from './SignUpPage';
 
 var working = React.createClass({
 

@@ -14,31 +14,22 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 import LoginPage from './LoginPage';
-import SignUpPage from './SignUpPage';
+
 var initialPage = React.createClass({
-  onPress(type){
-    if(type== 'SignUpPage')
-    {this.props.navigator.push({
-      component: SignUpPage
-    });
-}
-    else{
-     this.props.navigator.push({
-    component: LoginPage
-     });
-    }  
+  onPress(){
+    this.props.navigator.push({
+      component: LoginPage
+    })
   },
   render() {
     return (
        
       <View style={styles.container}>
-        <Text style={{margin:100, color: 'black'}}>
-        Unicorn Go
-        </Text>
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('SignUpPage')}> 
+        <Text> Unicorn Go </Text>
+        <Button style={{margin:50, backgroundColor: 'black'}} onPress={this.onPress}> 
           Sign Up
         </Button>
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('LoginPage')}> 
+        <Button style={{margin:50, backgroundColor: 'black'}} onPress={this.onPress}> 
           Login
         </Button>
       </View>
