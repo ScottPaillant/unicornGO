@@ -16,6 +16,9 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <activity
+                    android:name = "PushNotificationLocation"
+                    android:label="Hack"
             </intent-filter>
         </activity>
     </application>

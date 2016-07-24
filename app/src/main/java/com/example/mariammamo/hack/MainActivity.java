@@ -9,7 +9,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity {
+    TextView totalTextView;
+    EditText percentageTxt;
+    EditText numbertxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        totalTextView =(TextView) findViewById(R.id.TextView);
+        percentageTxt =(EditText) findViewById(R.id.percentageText);
+        numbertxt =(EditText) findViewById(R.id.numbertxt);
+
+        Button CalcBtn = (Button) findViewById(R.id.calcBtn);
+        calcBtn.setOnClickListener (new View.OnClickListener())
+        {
+
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
