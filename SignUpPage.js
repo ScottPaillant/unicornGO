@@ -35,13 +35,15 @@ var SignUpPage = React.createClass({
           <Text> Enter your information below </Text>
           <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
         </View>
-         
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('HomePage')}> 
-          Finish!
-        </Button>
-        <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('LoginPage')}> 
-          Back
-        </Button>
+
+         <View style={{flexDirection:'row'}}>
+          <Button style={{padding:50, backgroundColor: 'white', flex:1}} onPress={() => this.onPress('HomePage')}> 
+            Finish!
+          </Button>
+          <Button style={{padding:50, backgroundColor: 'white', flex:1}} onPress={() => this.onPress('LoginPage')}> 
+            Back
+          </Button>
+        </View>
       </View>
     );}
 });
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
 
 },
   Profile: {
-    flex:1,
+    flex:0,
     alignItems: 'center',
     padding:10,
     height:40,
