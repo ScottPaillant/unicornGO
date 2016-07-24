@@ -15,7 +15,8 @@ import {
 import Button from 'react-native-button';
 import LoginPage from './LoginPage';
 import SignUpPage from './SignUpPage';
-var initialPage = React.createClass({
+
+var InitialPage = React.createClass({
   onPress(type){
     if(type== 'SignUpPage')
     {this.props.navigator.push({
@@ -31,8 +32,8 @@ var initialPage = React.createClass({
   render() {
     return (
        
-      <View style={styles.container}>
-        <Text style={{margin:100, color: 'black'}}>
+      <View style = {styles.container}>
+        <Text style= {{margin:100, color: 'black'}}>
         Unicorn Go
         </Text>
         <Button style={{margin:50, backgroundColor: 'black'}} onPress={() => this.onPress('SignUpPage')}> 
@@ -51,19 +52,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'mintcream',
     alignItems: 'center',
-    fontFamily: 'Verdana'
-
-  },
-  welcome: {
-    fontSize: 70,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#a9a9a9',
-    marginBottom: 5,
   },
 });
 
-export default initialPage;
+export default InitialPage;

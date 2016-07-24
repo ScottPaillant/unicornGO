@@ -12,10 +12,12 @@ import {
   View,
   Navigator,
 } from 'react-native';
+
 import Button from 'react-native-button';
 import LoginPage from './LoginPage';
 import InitialPage from './InitialPage';
 import SignUpPage from './SignUpPage';
+import HomePage from './HomePage';
 
 var working = React.createClass({
 
