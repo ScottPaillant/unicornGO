@@ -28,8 +28,7 @@ var HomePage = React.createClass({
         <Text> Create an Account </Text>
         <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
-        <TextInput
-        style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
+        
       </View>
       );}
 });

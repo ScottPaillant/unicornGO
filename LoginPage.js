@@ -1,45 +1,74 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
+  TextInput,
   Navigator
 } from 'react-native';
 import Button from 'react-native-button';
-import sturecPage from './sturecPage';
-
+import HomePage from './HomePage'; 
 
 var LoginPage = React.createClass({
-  onPress(){
-    this.props.navigator.push({
-      component: sturecPage
-      })
+  onPress(type){
+    if(type== 'HomePage')
+    {this.props.navigator.push({
+      component: HomePage
+    });
+   }
+    else{
+     this.props.navigator.pop({
+     });
+    }  
   },
-
   render() {
     return (
-      <View style={{flex:1,backgroundColor:'mintcream'}}>
-        <Button> 
-          The 
-        </Button>
+
+      <View style={styles.Welcome}>
+        <Text style={{margin:50, color: 'black', marginTop:200 , fontSize: 30}}>
+         Login
+        </Text>
+        
+        <View style={styles.Profile}>
+
+          <Text> Enter your information below </Text>
+          <TextInput style={{height: 40,  borderColor: 'gray', borderWidth: 1}} />
+
+           <TextInput style={{height: 40,  borderColor: 'gray', borderWidth: 1}} />
+        </View>
+
+
+
+         <View style={{flexDirection:'row'}}>
+          <Button style={{padding:25, margin:50, marginTop:20,  flex:1}} onPress={() => this.onPress('LoginPage')}> 
+            Back!
+          </Button>
+
+          <Button style={{padding:25, margin:50, marginTop:20, flex:1}} onPress={() => this.onPress('HomePage')}> 
+           Done
+          </Button>
+        </View>
       </View>
     );}
 });
 
-
+//Style of the Welcome
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'blue',
+  Welcome: {
+  flex: 1,
+  backgroundColor: '#fcfcfc',
+  alignItems: 'center',
+
+},
+  Profile: {
+    flex:1,
+    alignItems: 'center',
+    padding:10,
+   
+
   },
-  
+
 });
 
 export default LoginPage;

@@ -36,7 +36,7 @@ var InitialPage = React.createClass({
 
       <View style={styles.container}>
       
-        <Text style={{margin:10, marginTop:200, color: 'black', fontSize: 40}}>
+        <Text style={{margin:10, marginTop:200, color: 'black', fontSize: 25}}>
         Unicorn Go
         </Text>
            <Image style={styles.bg} resizeMode = 'contain' source={require('./sf.png')}/>
@@ -64,8 +64,7 @@ const styles = StyleSheet.create({
         height: 100,
         resizeMode: 'contain',
         marginRight: 10
-
-       
+  
     }
 });
 
