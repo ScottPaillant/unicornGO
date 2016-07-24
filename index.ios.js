@@ -18,6 +18,7 @@ import LoginPage from './LoginPage';
 import InitialPage from './InitialPage';
 import SignUpPage from './SignUpPage';
 import HomePage from './HomePage';
+import ListPotentialTalent from './ListPotentialTalent';
 
 var working = React.createClass({
 

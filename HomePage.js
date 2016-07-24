@@ -9,12 +9,26 @@ import {
 } from 'react-native';
 
 import Button from 'react-native-button';
+import Resources from './Resources';
+import ListPotentialTalent from './ListPotentialTalent';
 
 var HomePage = React.createClass({
-  onPress(){
-    this.props.navigator.push({
-      component: LoginPage
-    })
+  onPress(type){
+    if(type== 'ListPotentialTalent')
+    {this.props.navigator.push({
+      component: ListPotentialTalent
+    }); 
+    }
+    else if(type=='resources'){
+     this.props.navigator.push({
+    component: Resources
+     });
+    } 
+    else
+    {
+      this.props.navigator.pop({
+     });
+    } 
   },
   render() {
     return (
@@ -22,17 +36,15 @@ var HomePage = React.createClass({
        <Text style={{margin:50, color: 'black', marginTop:200 , fontSize: 40}}>
         Home
         </Text>
-        <Button> 
-          Messages 
+        <Button onPress={() => this.onPress('ListPotentialTalent')}> 
+          List Potential 
         </Button>
-         <Button> 
+         <Button onPress={() => this.onPress('resources')}> 
           Resources
         </Button>
-        <Text> Create an Account </Text>
-        <TextInput
-        style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
-        <TextInput
-        style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
+        <Button onPress={() => this.onPress('goBack')}> 
+          Back
+        </Button>
       </View>
       );}
 });
@@ -40,7 +52,7 @@ var HomePage = React.createClass({
 const styles = StyleSheet.create({
       container: {
       flex: 1,
-      backgroundColor: 'mintcream',
+      backgroundColor: '#fcfcfc',
       alignItems: 'center',
      } 
    });

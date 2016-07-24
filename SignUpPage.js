@@ -35,7 +35,7 @@ var SignUpPage = React.createClass({
           <Text> Enter your information below </Text>
           <TextInput style={{height: 40,  borderColor: 'gray', borderWidth: 1}} />
 
-           <TextInput style={{height: 40,  borderColor: 'gray', borderWidth: 1}} />
+           <TextInput type='password' style={{height: 40,  borderColor: 'gray', borderWidth: 1}} />
         </View>
 
 
