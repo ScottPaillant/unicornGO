@@ -42,7 +42,7 @@ var LoginPage = React.createClass({
 
          <View style={{flexDirection:'row'}}>
           <Button style={{padding:25, margin:50, marginTop:20,  flex:1}} onPress={() => this.onPress('LoginPage')}> 
-            Back!
+            Back
           </Button>
 
           <Button style={{padding:25, margin:50, marginTop:20, flex:1}} onPress={() => this.onPress('HomePage')}> 

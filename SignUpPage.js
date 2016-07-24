@@ -26,7 +26,7 @@ var SignUpPage = React.createClass({
     return (
 
       <View style={styles.Welcome}>
-        <Text style={{margin:50, color: 'black', marginTop:200 , fontSize: 30}}>
+        <Text style={{margin:50, color: 'black', marginTop:200 , fontSize: 40}}>
          Create an Account
         </Text>
         
@@ -42,7 +42,7 @@ var SignUpPage = React.createClass({
 
          <View style={{flexDirection:'row'}}>
           <Button style={{padding:25, margin:50, marginTop:20,  flex:1}} onPress={() => this.onPress('LoginPage')}> 
-            Back!
+            Back
           </Button>
 
           <Button style={{padding:25, margin:50, marginTop:20, flex:1}} onPress={() => this.onPress('HomePage')}> 
@@ -65,8 +65,6 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems: 'center',
     padding:10,
-   
-
   },
 
 });

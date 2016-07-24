@@ -19,16 +19,20 @@ var HomePage = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-       <Text style={{margin:100, color: 'black'}}>
-        Unicorn Go
+       <Text style={{margin:50, color: 'black', marginTop:200 , fontSize: 40}}>
+        Home
         </Text>
         <Button> 
-          Home! Welcome! 
+          Messages 
+        </Button>
+         <Button> 
+          Resources
         </Button>
         <Text> Create an Account </Text>
         <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
-        
+        <TextInput
+        style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
       </View>
       );}
 });
