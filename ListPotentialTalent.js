@@ -14,13 +14,21 @@ import {
   Navigator,
   ListView,
   StatusBar,
-  Image
+  Image,
+  TouchableHighlight
+  
 } from 'react-native';
 import Button from 'react-native-button';
+import PotentialInfoPage from './PotentialInfoPage';
 
 var ListPotentialTalent = React.createClass({
   onPress(){
     this.props.navigator.pop({
+    });
+  },
+  onClick(){
+    this.props.navigator.push({
+      component: PotentialInfoPage
     });
   },
   watchID: (null: ?number),
@@ -54,19 +62,25 @@ var ListPotentialTalent = React.createClass({
   render() {
     return (
       <View>
-          <Image style={{height: 100,width:100, marginTop:20}} source={require('./obama.png')}/>
+          <TouchableHighlight onPress={this.onClick}>
+           <Image style={{height: 100,width:100, marginTop:20}} source={require('./obama.png')}/>
+          </TouchableHighlight>
           <TextInput
             style={{margin:25, height: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
             value={'Android Developer'}
           />
-          <Image style={styles.ic} source={require('./jwill.png')}/>
+          <TouchableHighlight onPress={this.onClick}>
+            <Image style={styles.ic} source={require('./jwill.png')}/>
+          </TouchableHighlight>
           <TextInput
             style={{margin:25, height: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
             value={'iOS Developer'}
           />
-          <Image style={styles.ic} source={require('./weidman.png')}/>
+          <TouchableHighlight onPress={this.onClick}>
+           <Image onClick={() => this.onClick} style={styles.ic} source={require('./weidman.png')}/>
+          </TouchableHighlight>
           <TextInput
             style={{margin:25, height: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
